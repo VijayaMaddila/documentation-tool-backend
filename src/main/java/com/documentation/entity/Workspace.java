@@ -26,7 +26,7 @@ public class Workspace {
     @ManyToOne
     @JoinColumn(name = "ownerId")
     private User owner;
-    
+
     @OneToMany(mappedBy="workspace",cascade=CascadeType.ALL)
     private List<Folder> folders;
 }
